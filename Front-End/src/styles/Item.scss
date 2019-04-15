@@ -1,0 +1,132 @@
+@import './index.scss';
+
+.invItemContainer {
+    width: $wrapMobile;
+    margin: auto;
+    margin-top: 1.5rem;
+
+    @media (min-width: $tablet) {
+        width: $wrapTablet;
+    }
+    @media (min-width: $desktop) {
+        width: $wrapDesktop;
+    }
+
+    &__outertitle {
+        display: flex;
+        justify-content: space-between;
+
+        @media (min-width: $tablet) {
+            justify-content: flex-start;
+            border-bottom: 1px solid $label;
+            padding-bottom: 1.5rem;
+            margin-top: 3rem;
+        }
+    }
+
+    &__outer {
+        display: flex;
+        justify-content: space-between;
+
+        &--inner {
+            width: 8.25rem;
+
+            @media (min-width: $tablet) {
+                width: 50%;
+            }
+        }
+    }
+
+    &__name {
+        margin: 0 0 0 1rem;
+        width: 10rem;
+        @include H1__Mobile;
+
+        @media (min-width: $tablet) {
+            width: auto;
+            padding-right: 1rem;
+        }
+    }
+    
+    &__inStockGreen {
+        background-color: limegreen;
+        color: white;
+        width: 5.5rem;
+        font-weight: bold;
+        @include H2__Mobile;
+        border-radius: 4px;
+        text-align: center;
+        height: 1.5rem;
+        margin-top: 0.25rem;
+    }
+
+    &__inStockGray {
+        background-color: lightgray;
+        color: white;
+        width: 5.5rem;
+        font-weight: bold;
+        @include H2__Mobile;
+        border-radius: 4px;
+        text-align: center;
+        height: 1.5rem;
+        margin-top: 0.25rem;
+    }
+
+    &__label {
+        color: $label;
+        @include H5__Labels__Mobile;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    &__text {
+        @include H4__Paragraph__Mobile;
+        margin:0 0 1.5rem 0;
+    }
+
+    &__btnContainer {
+        display: flex;
+        justify-content: flex-end;
+        
+            &--button {
+                width: 18rem;
+                height: 3rem;
+                background-color: $instockBlue;
+                color: white;
+                border-radius: 4px;
+                @include H2__Mobile;
+                font-weight: bold;
+
+                @media (min-width: $tablet) {
+                    margin-top: 2.5rem;
+                    width: 10rem;
+                    height: 3rem;
+                }
+        }
+    }
+}
+
+#orderinfo {
+    margin-bottom: 1.5rem;
+
+    @media (min-width: $desktop) {
+        width: 50%;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+#description {
+    @media (min-width: $desktop) {
+        width: 50%;
+        margin-top: 2.5rem;
+    }
+}
+
+#desktopContainer {
+    @media (min-width: $tablet) {
+    border-bottom: 1px solid $label;
+    }
+    @media (min-width: $desktop) {
+        display: flex;
+    }
+}

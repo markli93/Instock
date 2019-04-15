@@ -1,0 +1,149 @@
+$instockBlue: #004892; 
+$instockDarkBlue: #002F5F;
+$black: #323232;
+$white: #FFFFFF;
+$label: #AFAFAF; // Silver
+$background: #FAFAFA; // Alablaster
+$border: #E1E1E1; // Mercury
+$font: "AvenirNext LT Pro";
+
+$wrapDefault: 90%;
+$wrapTablet: 93.75%;
+$wrapDesktop: 75%;
+
+$tablet: 768px;
+$desktop: 1440px;   
+
+@mixin tablet {
+    @media(min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin inputStyle {
+    &:focus, &:hover {
+        border: 2px solid $black;
+    }
+    box-sizing: border-box;
+    font-family: $font;
+    border: 2px solid $border;
+    border-radius: 2px;
+    outline: none;
+    padding: 16px;
+}
+
+@mixin heroFont {
+    font-size: 24px;
+    line-height: 32px;
+    @include tablet {
+        font-size: 60px;
+        line-height: 68px;
+    }
+}
+
+@mixin headFont {
+    font-size: 24px;
+    line-height: 32px;
+    @include tablet {
+        font-size: 36px;
+        line-height: 32px;
+    }   
+}
+
+@mixin subheadFont {
+    font-size: 14px; 
+    line-height: 22px;
+    @include tablet {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@mixin paraFont {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 500;
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@mixin labelFont { 
+    color: $label; 
+    font-size: 14px;
+    line-height: 20px;
+    @include tablet {
+        font-size: 14px;
+    }
+}
+
+.wrapper {
+    width: $wrapDefault;
+    margin: auto;
+    @include tablet {
+        width: $wrapTablet;
+    }
+    @include desktop {
+        width: $wrapDesktop;
+    }
+}
+.warehouseInventory {
+    &__title {
+        display: flex;
+        border-bottom: 1px solid $border;
+        padding-bottom: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        img {
+            margin-top: 25px;
+            margin-right: 20px;
+        }
+    &--title{
+        font-size: 2em;
+    }    
+    }
+    .warehouseInfo {
+        @include tablet {
+            display: flex;
+        }
+        margin-bottom: 30px;
+        &__address {
+            h2 {
+                @include labelFont();
+                @include tablet {
+                    margin-top: 10px;
+                }
+            }
+            p {
+                line-height: 10px;
+            }
+            margin-right: 20vw;
+            &--marginBottom {
+                margin-bottom: 30px;
+            }
+        }
+        &__contact {
+            h2 {
+                @include labelFont();
+                margin-top: 40px;
+                color: $label;
+                @include tablet {
+                    margin-top: 10px;
+                }
+            }
+            p {
+                line-height: 10px;
+            }
+            &--marginBottom {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

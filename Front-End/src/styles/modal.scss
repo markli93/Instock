@@ -1,0 +1,165 @@
+@import './index.scss';
+
+.modalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0.5, 0.5, 0.5, 0.5);
+    
+    .popUp {
+        width: 500px;
+        height: 400px;
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @media (max-width: 767px){
+            overflow: scroll;
+            top: 49%;
+            width: 101%;
+            height: 102%;
+        }
+        &__content {
+            padding: 32px 8px 28px 48px;
+            background: $white;
+            border-radius: 4px;
+
+            @media (max-width: 767px){
+                padding: 32px 16px;
+            }
+            &--title {
+                margin: 0 0 48px; 
+                font-size: 35px;
+
+                @media (max-width: 767px){
+                    font-size: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    .formInput {
+        display: inline-flex;
+        flex-direction: column;
+
+        @media (max-width: 767px){
+            width: 100%;
+        }
+    }
+    .titleLabel, .statusLabel {
+        display: flex;
+        flex-direction: column;
+        @include H5__Labels__Desktop;
+        color: $label;
+
+        @media (min-width: $tablet){
+            width: 180px;
+            margin-right: 40px;
+            padding-bottom: 0;
+        }
+    }
+    .statusLabel {
+        margin-top: 4px;
+
+        @media (min-width: $tablet){
+            margin-bottom: 24px;
+        }
+    }
+    .formField, .descriptField, .countryField {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        margin-right: 0; 
+        padding-top: 10px;
+        padding-left: 16px;
+        background-color: #FAFAFA;
+        border-radius: 4px;
+        border: solid 1px $border;
+        resize: none;
+        outline: none;
+
+        @media (max-width: 767px){
+            margin-top: 5px;
+            height: 28px;
+            padding-top: 12px;
+            padding-left: 18px;
+        }
+    }
+    .formDescript {
+        @media (max-width: 767px){
+            margin-top: 24px; 
+        }
+    }
+    .descriptField {
+        height: 80px; 
+
+        @media (min-width: $tablet){
+            width: 383px;
+            height: 50px; 
+        }
+    }
+    .formButtons {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (min-width: $tablet){
+            width: 403px;
+        }
+        @media (max-width: 767px){
+            flex-direction: column;
+        }
+        .cancelText {
+            color: $instockBlue;
+            border: none;
+            background-color: unset;
+
+            @media (max-width: 767px){
+                display: none;
+            }
+        }
+        .saveButton {
+            background-color: $instockBlue;
+            color: $white;
+            border-radius: 4px;
+            width: 140px;
+            height: 48px;
+            margin-left: 48px; 
+            outline: none;
+            border: none;
+
+            @media (max-width: 767px){
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        .cancelTextMobile {
+            margin-top: 15px;
+            color: $instockBlue;
+            border: none;
+            background-color: unset;
+
+            @media (min-width: $tablet){
+                display: none;
+            }
+        }
+    }
+    .countryField {
+        padding-top: 0;
+        height: 44px; 
+
+        @media (min-width: $tablet){
+            height: 52px;
+        }
+    }
+    .stockField {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+
+        .stockText {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,317 @@
+@import url("./Font/stylesheet.css");
+
+$mobile: 288px;
+$tablet: 720px;
+$desktop: 1080px;
+
+$instockDarkBlue: #002F5F;
+$black: #323232;
+$white: #FFFFFF;
+$label: #AFAFAF;
+$background: #FAFAFA;
+
+$font: "AvenirNext LT Pro";
+
+@mixin grey-label-font{
+    font-size: 12px;
+    line-height: 20px;
+    color: $label;
+  }
+  
+@mixin textarea {
+    background-color: $background;
+    border-radius: 5px;
+}
+
+@mixin button-style {
+    color: $white;
+    width: 160px;
+    height: 48px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: $instockDarkBlue;
+    border: none;
+    text-align: center;
+}
+
+.styles_overlay__CLSq- {
+    @media (min-width: $mobile){
+        padding: 0px;
+        display: block;
+    }
+    @media (min-width: $tablet){
+        padding: 1.5rem;
+        display: flex;
+    }
+}
+
+.styles_modal__gNwvD {
+    // @media (min-width: $mobile){
+    //     padding: 32px 16px 0px 16px;
+    //     position: absolute;
+    // }
+    @media (min-width: $tablet){
+        // position: absolute;
+        // left: 25%;
+        // right: 25%;
+        // top: 25%;
+        // background: $white;
+        // display: flex;
+        // flex-direction: column;
+        // padding: 56px 48px 40px 48px;
+        // width: 576px;
+        max-width: 800px;
+        position: relative;
+        padding: 56px 48px 40px 48px;
+        background: $white;
+        background-clip: padding-box;
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+        margin: auto;
+
+    }
+    @media (min-width: $desktop){
+        max-width: 800px;
+        position: relative;
+        padding: 56px 48px 40px 48px;
+        background: $white;
+        background-clip: padding-box;
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+        margin: auto;
+    }
+}
+  
+*{
+    font-family: $font;
+    color: black;
+}
+
+h1{
+    @media (min-width: $mobile){
+        margin: 0px 0px 32px 0px;
+    }
+    @media (min-width: $tablet){
+        margin: 0px 0px 48px 0px;
+    }
+}
+
+label{
+    @include grey-label-font();
+    padding-bottom: 8px;
+  }
+
+textarea{
+    @include textarea();
+    padding: 16px 0px 0px 16px;
+
+    @media (min-width: $mobile){
+        margin-right: 0px;
+    }
+    @media (min-width: $tablet){
+        margin-right: 40px;
+    }
+  }
+
+section{
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $mobile){
+        margin-bottom: 24px;
+    }
+  }
+
+.form__nameInput{
+    @media (min-width: $tablet){
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 24px;
+
+        textarea{
+            width: 220px;
+            height: 48px;
+        }
+    }
+    @media (min-width: $desktop){
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 24px;
+
+        textarea{
+            width: 220px;
+            height: 48px;
+        }
+    }
+}
+
+.form__addressInputs {
+    @media (min-width: $mobile){
+        select{
+            @include textarea();
+            width: 610px;
+            height: 55px;
+        }
+        &-suite, &-province, &-postal{
+            margin-top: 35px;
+        }
+    }
+    @media (min-width: $tablet){
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 24px;
+
+        textarea{
+            width: 220px;
+            height: 48px;
+        }
+        select{
+            @include textarea();
+            width: 240px;
+            height: 65px;
+        }
+        &-suite, &-province, &-postal{
+            margin-top: 35px;
+        }
+    }
+    @media (min-width: $desktop){
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+
+        textarea{
+            width: 220px;
+            height: 48px;
+        }
+        select{
+            @include textarea();
+            width: 240px;
+            height: 65px;
+        }
+        &-suite, &-province, &-postal{
+            margin-top: 35px;
+        }
+    }
+}
+
+.form__contactInputs1{
+    @media (min-width: $tablet){
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 24px;
+
+        textarea{
+            width: 220px;
+            height: 48px;
+        }
+    }
+
+    @media (min-width: $desktop){
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+
+        textarea{
+            width: 220px;
+            height: 48px;
+        }
+    }
+}
+
+.form__contactInputs2{
+    @media (min-width: $tablet){
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 24px;
+
+        textarea{
+            width: 220px;
+            height: 48px;
+        }
+    }
+
+    @media (min-width: $desktop){
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+
+        textarea{
+            width: 220px;
+            height: 48px;
+        }
+    }
+}
+
+.form__inventory{
+    @media (min-width: $mobile){
+        textarea{
+            height: 80px;
+        }
+    }
+    @media (min-width: $tablet){
+        textarea{
+            width: 500px;
+            height: 80px;
+        }
+    }
+    @media (min-width: $desktop){
+        textarea{
+            width: 500px;
+            height: 80px;
+        }
+    }
+}
+
+.buttons{
+    @media (min-width: $mobile){
+        padding-top: 32px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &__cancel{
+            @include button-style();
+            color: $instockDarkBlue;
+            background-color: $white;
+        }
+        &__save{
+            @media (min-width: $mobile){
+                @include button-style();
+                width: 160px;
+            }
+        }
+    }
+
+    @media (min-width: $tablet){
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 40px;
+        flex-direction: row;
+
+        &__cancel{
+            @include button-style();
+            color: $instockDarkBlue;
+            background-color: $white;
+        }
+        &__save{
+            @include button-style();
+            width: 160px;
+        }
+    }
+
+    @media (min-width: $desktop){
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 40px;
+        flex-direction: row;
+
+        &__cancel{
+                @include button-style();
+                color: $instockDarkBlue;
+                background-color: $white;
+        }
+
+        &__save{
+                @include button-style();
+                width: 160px;
+        }
+    }
+}
